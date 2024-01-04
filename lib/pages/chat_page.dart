@@ -1,12 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:chat_app_firebase/data/datasources/firebase_datasource.dart';
-import 'package:chat_app_firebase/data/models/chanel_model.dart';
-import 'package:chat_app_firebase/data/models/message_model.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../data/datasources/firebase_datasource.dart';
+import '../data/models/chanel_model.dart';
+import '../data/models/message_model.dart';
 import '../data/models/user_model.dart';
 import 'widgets/chat_bubble.dart';
 

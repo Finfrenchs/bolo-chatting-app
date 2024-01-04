@@ -1,9 +1,8 @@
-import 'package:chat_app_firebase/data/datasources/firebase_datasource.dart';
-import 'package:chat_app_firebase/data/models/user_model.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../data/datasources/firebase_datasource.dart';
+import '../data/models/user_model.dart';
 import 'chat_page.dart';
 import 'login_page.dart';
 

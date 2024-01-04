@@ -1,7 +1,8 @@
-import 'package:chat_app_firebase/data/models/chanel_model.dart';
-import 'package:chat_app_firebase/data/models/message_model.dart';
-import 'package:chat_app_firebase/data/models/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import '../models/chanel_model.dart';
+import '../models/message_model.dart';
+import '../models/user_model.dart';
 
 String channelId(String id1, String id2) {
   if (id1.hashCode < id2.hashCode) {

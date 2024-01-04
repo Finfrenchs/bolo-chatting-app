@@ -68,13 +68,20 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
         title: const Text(
           'Register Page',
           style: TextStyle(
             color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.red.shade900,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -82,21 +89,10 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             const SizedBox(height: 24.0),
             //logo flutter
-            const FlutterLogo(
-              size: 100,
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Image.asset('assets/images/logo-chat1.png'),
             ),
-            const SizedBox(height: 16.0),
-            //title Code with Bahri
-            const Text(
-              'Code with Bahri',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueGrey,
-              ),
-            ),
-
             const SizedBox(height: 48.0),
             TextField(
               controller: _nameController,
@@ -126,7 +122,13 @@ class _RegisterPageState extends State<RegisterPage> {
                 onPressed: () {
                   _register();
                 },
-                child: const Text('Register'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red.shade900,
+                ),
+                child: const Text(
+                  'Register',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
             const SizedBox(height: 16.0),
@@ -140,7 +142,10 @@ class _RegisterPageState extends State<RegisterPage> {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (context) => const LoginPage()));
                   },
-                  child: const Text('Login'),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(color: Colors.red.shade900),
+                  ),
                 ),
               ],
             ),
